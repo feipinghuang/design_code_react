@@ -30,12 +30,16 @@ a {
   color: white;
   font-size: 60px;
   line-height: 1.2;
+  opacity: 0;
+  animation: HeroAnimation 3s  0.1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
 .Hero p {
   font-size: 30px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  animation: HeroAnimation 3s  0.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
 .Hero a {
@@ -46,6 +50,23 @@ a {
   padding: 9px 20px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Hero a:hover {
+  background: white;
+  color: black;
+}
+
+@keyframes HeroAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 @media (max-width: 640px) {
