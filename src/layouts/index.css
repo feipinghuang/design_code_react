@@ -16,6 +16,7 @@ a {
   background: url("../images/wallpaper3.jpg");
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .HeroGroup {
@@ -58,6 +59,22 @@ a {
   color: black;
 }
 
+.Hero svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.Logos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 40px;
+  justify-items: center;
+  align-items: center;
+  margin: 100px 0;
+}
+
 @keyframes HeroAnimation {
   0% {
     opacity: 0;
@@ -80,5 +97,9 @@ a {
 
   .Hero p {
     font-size: 24px;
+  }
+
+  .Logos {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
